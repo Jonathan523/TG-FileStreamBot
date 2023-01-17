@@ -15,7 +15,7 @@ data = {
     "jsonrpc": "2.0",
     "method": "aria2.addUri",
     "id": "1",
-    "params": [f"token:{ARIA2_SECRET}",["url"]]
+    "params": [f"token:{Var.ARIA2_SECRET}",["url"]]
 }
 
 headers = {
