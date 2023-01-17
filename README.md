@@ -156,6 +156,10 @@ HAS_SSL=False
 
 `BIN_CHANNEL` : Create a new channel (private/public), post something in your channel. Forward that post to [@missrose_bot](https://telegram.dog/MissRose_bot) and **reply** `/id`. Now copy paste the forwarded channel ID in this field. 
 
+`ARIA2_RPC_URL` : Your Aria2 server jsonrpc url. (Example:`https://aria2.example.com:6800/jsonrpc`
+
+`ARIA2_SECRET` : Your Aria2 server rpc secret
+
 ### For making use of Multi-Client support
 
 > **What it does?** <br>
