@@ -49,10 +49,11 @@ async def media_receive_handler(_, m: Message):
     logger.info(f"Generated link: {stream_link} for {m.from_user.first_name}")
     response = requests.post(rpc_url, data=json.dumps(data), headers=headers)
     logger.info(response.text)
+    gid = json.loads(response.text)['result']
     try:
         await m.reply_text(
-            text="<code>{}</code>\n(<a href='{}'>shortened</a>\nPushed to Aria2)".format(
-                stream_link, short_link
+            text="<code>{}</code>\n(<a href='{}'>shortened</a>)\nPushed to Aria2, GID:{})".format(
+                stream_link, short_link, gid
             ),
             quote=True,
             parse_mode=ParseMode.HTML,
