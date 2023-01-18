@@ -52,7 +52,7 @@ async def media_receive_handler(_, m: Message):
     gid = json.loads(response.text)['result']
     try:
         await m.reply_text(
-            text="<code>{}</code>\n(<a href='{}'>shortened</a>\n)\nPushed to Aria2, GID:{})".format(
+            text="<code>{}</code>\n(<a href='{}'>shortened</a> \n Pushed to Aria2, GID:{}".format(
                 stream_link, short_link, gid
             ),
             quote=True,
